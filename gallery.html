@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея проекта</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="urls/con_urls.js"></script>
+  <script src="urls/ext_urls.js"></script>
+  <script src="urls/int_urls.js"></script>
+  <script src="gallery.js"></script>
+
+  <body>
+    <!-- Навигационное меню -->
+    <header>
+      <nav class="navbar">
+        <div class="logo" id="floating-logo">
+          <img src="assets/icons/KORK.png" alt="KORK Studio" />
+        </div>
+        <!-- Контейнер для навигационных ссылок -->
+        <div class="left">
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="works.html">Наши работы</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+        </div>
+
+        <!-- Логотип по центру -->
+        <div class="logo">
+          <img src="assets/icons/KORK.png" alt="KORK Studio" />
+        </div>
+
+        <!-- Контейнер для социальных иконок -->
+        <div class="right">
+          <div class="social-icons">
+            <a href="https://www.behance.net/eriksadirov" target="_blank">
+              <img src="assets/icons/behance_icon.png" alt="Behance" />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=996505459505&text&type=phone_number&app_absent=0"
+              target="_blank"
+            >
+              <img src="assets/icons/whatsapp_icon.png" alt="WhatsApp" />
+            </a>
+            <a href="https://www.instagram.com/kork_studio/" target="_blank">
+              <img src="assets/icons/instagram_icon.png" alt="Instagram" />
+            </a>
+            <a href="mailto:ernazbekjar@gmail.com" target="_blank">
+              <img src="assets/icons/email_icon.png" alt="Email" />
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Кнопка назад в левом верхнем углу -->
+    <button class="back-button" onclick="window.history.back();">
+      <img src="assets/icons/arrow_back.png" alt="Back" />
+    </button>
+
+    <!-- Галерея -->
+    <section class="gallery-2" id="project-gallery"></section>
+
+    <!-- Модальное окно для просмотра изображений -->
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modal-img" class="modal-content" />
+    </div>
+
+    <section class="hero">
+      <h2>© KORK Studio 2025</h2>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>

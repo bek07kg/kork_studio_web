@@ -1,0 +1,446 @@
+@font-face {
+  font-family: "LTWave"; /* Имя шрифта */
+  src: url("assets/fonts/LTWave-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "LTWave", sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Стили для гамбургер-меню */
+.hamburger {
+  position: absolute; /* Нужно добавить, чтобы можно было позиционировать относительно родителя */
+  top: 10;
+  left: 15; /* Перемещаем гамбургер влево */
+  background-color: #e5e5e5;
+  display: flex; /* Убедитесь, что он отображается как flex-контейнер */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* Стили для навигации на мобильных устройствах */
+.drawer {
+  display: block; /* Оставляем блок видимым */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #e5e5e5;
+  z-index: 100;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+
+  transform: translateX(-100%); /* Скрыто за пределами экрана */
+  opacity: 0; /* Полностью прозрачное */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.drawer.active {
+  transform: translateX(0); /* Плавно сдвигается в экран */
+  opacity: 1; /* Появляется */
+}
+
+/* Стили для скрытия навигационных ссылок и иконок */
+.navbar .nav-links,
+.navbar .social-icons {
+  display: flex;
+}
+
+.navbar .nav-links a,
+.navbar .social-icons img {
+  font-size: 15px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Скрытие ссылок на мобильных устройствах */
+@media (max-width: 768px) {
+  .navbar .nav-links,
+  .navbar .social-icons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .drawer.active {
+    display: block;
+  }
+}
+
+.tabbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #fff;
+  padding: 20px 10px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 20px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "LTWave", sans-serif;
+  color: #333;
+}
+
+.tab:hover {
+  color: #000;
+}
+
+.tab.active {
+  background: #222;
+  color: #fff;
+  border-radius: 30px;
+  padding: 16px 36px;
+}
+
+/* Навигация */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+  padding: 20px 30px;
+  height: 140px;
+  position: relative;
+}
+
+.navbar .left,
+.navbar .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left {
+  justify-content: flex-start; /* Центрируем ссылки */
+  margin-left: -30px;
+}
+
+.navbar .right {
+  justify-content: flex-end;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-family: "LTWave", sans-serif;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 80px;
+}
+
+/* Социальные иконки */
+.social-icons img {
+  width: 28px;
+  margin-left: 20px;
+}
+
+/* Главный баннер */
+.hero {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #333;
+  font-family: "LTWave", sans-serif;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #666;
+  font-family: "LTWave", sans-serif;
+}
+
+.hero h2 {
+  font-size: 18px;
+  color: #333;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /* Элементы будут располагаться вертикально */
+  gap: 20px; /* Расстояние между элементами */
+  padding: 40px; /* Отступы вокруг контейнера */
+}
+
+.text-content t1 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+.text-content t2 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content t3 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content t4 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+text-content {
+  display: flex;
+  flex-direction: column; /* Элементы будут располагаться вертикально */
+  gap: 20px; /* Расстояние между элементами */
+  padding: 40px; /* Отступы вокруг контейнера */
+}
+
+.text-content-2 t1 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+.text-content-2 t2 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content-2 t3 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content-2 t4 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+/* Галерея */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
+}
+
+#floating-logo {
+  display: none; /* Логотип скрыт по умолчанию */
+  position: fixed;
+  top: 80px; /* Увеличиваем значение для опускания логотипа вниз */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+#floating-logo img {
+  height: 50px; /* Размер логотипа */
+  filter: brightness(0) invert(1); /* Применяем белый цвет к логотипу */
+}
+
+#floating-logo-2 {
+  display: none; /* Логотип скрыт по умолчанию */
+  position: fixed;
+  top: 80px; /* Увеличиваем значение для опускания логотипа вниз */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+#floating-logo-2 img {
+  height: 50px; /* Размер логотипа */
+  filter: brightness(0) invert(1); /* Применяем белый цвет к логотипу */
+}
+
+.gallery-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два столбца */
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею */
+}
+
+.gallery-2 a {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-2 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease; /* Добавляем плавность */
+}
+
+/* Затемнение при наведении */
+.gallery-2 a:hover img {
+  opacity: 0.5; /* Затемняем изображение */
+}
+
+/* Для мобильных устройств (1 столбец) */
+@media (max-width: 768px) {
+  .gallery-2 {
+    grid-template-columns: 1fr; /* Один столбец на узких экранах */
+  }
+}
+
+/* Стиль для кнопки */
+.back-button {
+  position: fixed; /* Фиксируем кнопку в правом верхнем углу */
+  top: 120px; /* Отступ сверху */
+  left: 40px; /* Отступ справа */
+  width: 60px; /* Размер кнопки */
+  height: 60px; /* Размер кнопки */
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачно-черный фон */
+  border: none; /* Без границы */
+  border-radius: 50%; /* Круглая форма */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Центрируем иконку */
+  cursor: pointer; /* Курсор при наведении */
+  transition: background-color 0.3s; /* Плавное изменение фона при наведении */
+}
+
+.back-button img {
+  width: 25px; /* Размер иконки */
+  height: 25px;
+  filter: invert(1); /* Белый цвет для иконки */
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее при наведении */
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1; /* Поверх всего */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Прозрачный фон */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%; /* Растягивает изображение */
+  max-width: 900px; /* Можно изменить под нужный размер */
+  height: auto; /* Сохраняет пропорции */
+  object-fit: contain; /* Вписывает изображение без обрезки */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
