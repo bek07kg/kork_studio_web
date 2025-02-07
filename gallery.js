@@ -1,6 +1,9 @@
+let currentImageIndex = 0;
+let currentImageGroup = []; // Массив с изображениями для текущей группы
+
 document.addEventListener("DOMContentLoaded", function () {
   const gallerySection = document.getElementById("project-gallery");
-  if (!gallerySection) return; // Проверяем, есть ли секция галереи
+  if (!gallerySection) return;
 
   // Получаем параметр из URL
   const params = new URLSearchParams(window.location.search);
@@ -25,24 +28,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Если группа найдена, загружаем изображения
   if (imageGroups[group]) {
-    const uniqueImages = new Set(); // Используем Set для предотвращения дубликатов
+    currentImageGroup = imageGroups[group];
+    const uniqueImages = new Set();
 
-    imageGroups[group].forEach((imageUrl) => {
+    currentImageGroup.forEach((imageUrl) => {
       if (!uniqueImages.has(imageUrl)) {
-        // Если изображение ещё не добавлено
         const img = document.createElement("img");
         img.src = imageUrl;
         img.alt = "Проект";
         img.loading = "lazy";
         gallerySection.appendChild(img);
 
-        // Обработка клика по изображению
         img.onclick = function () {
-          // Здесь можно добавить код для открытия изображения в модальном окне
-          openModal(imageUrl);
+          openModal(imageUrl); // Открытие модального окна при клике
         };
 
-        uniqueImages.add(imageUrl); // Добавляем в Set
+        uniqueImages.add(imageUrl);
       }
     });
   } else {
@@ -55,13 +56,32 @@ function openModal(imageUrl) {
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modal-img");
 
-  // Отображаем модальное окно с изображением
   modal.style.display = "block";
   modalImg.src = imageUrl;
 
-  // Закрытие модального окна
+  currentImageIndex = currentImageGroup.indexOf(imageUrl);
+
+  // Обработка закрытия модального окна
   const closeBtn = document.querySelector(".close");
   closeBtn.onclick = function () {
     modal.style.display = "none";
+  };
+
+  // Обработчики стрелок для переключения изображений
+  const leftButton = document.querySelector(".left-button");
+  const rightButton = document.querySelector(".right-button");
+
+  leftButton.onclick = function () {
+    // Переходим к предыдущему изображению
+    currentImageIndex =
+      (currentImageIndex - 1 + currentImageGroup.length) %
+      currentImageGroup.length;
+    modalImg.src = currentImageGroup[currentImageIndex];
+  };
+
+  rightButton.onclick = function () {
+    // Переходим к следующему изображению
+    currentImageIndex = (currentImageIndex + 1) % currentImageGroup.length;
+    modalImg.src = currentImageGroup[currentImageIndex];
   };
 }

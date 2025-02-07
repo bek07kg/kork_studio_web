@@ -91,21 +91,31 @@ body {
 
 .tabbar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
   background: #fff;
   padding: 20px 10px;
+  overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+  -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на iOS */
+  flex-wrap: nowrap; /* Чтобы элементы не переходили на следующую строку */
+}
+
+/* Убираем индикатор прокрутки */
+.tabbar::-webkit-scrollbar {
+  display: none; /* Скрываем полоску прокрутки */
 }
 
 .tab {
   background: none;
   border: none;
   font-size: 16px;
-  padding: 20px 15px;
+  padding: 15px 20px;
   cursor: pointer;
   transition: all 0.3s;
   font-family: "LTWave", sans-serif;
   color: #333;
+  white-space: nowrap;
+  border-radius: 30px;
 }
 
 .tab:hover {
@@ -115,8 +125,21 @@ body {
 .tab.active {
   background: #222;
   color: #fff;
-  border-radius: 30px;
   padding: 16px 36px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .tabbar {
+    gap: 8px;
+    padding: 10px 5px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
 }
 
 /* Навигация */
@@ -376,6 +399,7 @@ text-content {
 @media (max-width: 768px) {
   .gallery-2 {
     grid-template-columns: 1fr; /* Один столбец на узких экранах */
+    padding: 5px; /* Отступ от экрана в 5 пикселей */
   }
 }
 
@@ -431,11 +455,24 @@ text-content {
   position: absolute;
   top: 15px;
   right: 35px;
+
   color: #fff;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 30px; /* Меньший размер шрифта для уменьшения высоты */
+
   cursor: pointer;
   z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  border-radius: 15px; /* Согнутые углы */
+
+  padding: 16px 24px; /* Уменьшены отступы для уменьшения размера */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; /* Убираем стандартную рамку кнопки */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для фона и тени */
 }
 
 .close:hover,
@@ -443,4 +480,78 @@ text-content {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее фон при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
+}
+
+.right-button {
+  position: absolute;
+  top: 50%; /* Центр по вертикали */
+  right: 40px; /* Отступ от правого края */
+  transform: translateY(
+    -50%
+  ); /* Сдвиг на 50% высоты элемента, чтобы центрировать */
+
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  border-radius: 15px; /* Согнутые углы (квадрат с округлыми углами) */
+
+  padding: 20px; /* Отступы для кнопки */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; /* Убираем стандартную рамку кнопки */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для фона и тени */
+}
+
+.right-button:hover,
+.right-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7); /* Изменение фона на темнее */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
+}
+
+.left-button {
+  position: absolute;
+  top: 50%; /* Центр по вертикали */
+  left: 40px; /* Отступ от левого края */
+  transform: translateY(
+    -50%
+  ); /* Сдвиг на 50% высоты элемента, чтобы центрировать */
+
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  border-radius: 15px; /* Согнутые углы */
+
+  padding: 15px; /* Отступы для кнопки */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; /* Убираем стандартную рамку кнопки */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для фона и тени */
+}
+
+.left-button:hover,
+.left-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее фон при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
 }
