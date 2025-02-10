@@ -15,13 +15,13 @@ body {
   text-align: center;
 }
 
-/* Стили для гамбургер-меню */
+/* Скрываем гамбургер-меню по умолчанию (для десктопов) */
 .hamburger {
-  position: absolute; /* Нужно добавить, чтобы можно было позиционировать относительно родителя */
-  top: 10;
-  left: 15; /* Перемещаем гамбургер влево */
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 15px;
   background-color: #e5e5e5;
-  display: flex; /* Убедитесь, что он отображается как flex-контейнер */
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -36,6 +36,13 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Показываем гамбургер-меню только на мобильных устройствах */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
 /* Стили для навигации на мобильных устройствах */
 .drawer {
   display: block; /* Оставляем блок видимым */
@@ -44,7 +51,7 @@ body {
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: #e5e5e5;
+  background-color: #373737;
   z-index: 100;
   padding: 20px;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
@@ -95,14 +102,22 @@ body {
   gap: 15px;
   background: #fff;
   padding: 20px 10px;
-  overflow-x: auto; /* Добавляем горизонтальную прокрутку */
-  -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на iOS */
-  flex-wrap: nowrap; /* Чтобы элементы не переходили на следующую строку */
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  -webkit-overflow-scrolling: touch; /* Плавная прокрутка на iOS */
+  flex-wrap: nowrap; /* Запрещаем перенос элементов на новую строку */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tabbar > * {
+  flex-shrink: 0; /* Запрещаем сжатие элементов */
+  min-width: 150px; /* Минимальная ширина для элементов */
+  box-sizing: border-box;
 }
 
 /* Убираем индикатор прокрутки */
 .tabbar::-webkit-scrollbar {
-  display: none; /* Скрываем полоску прокрутки */
+  display: none;
 }
 
 .tab {
@@ -116,6 +131,7 @@ body {
   color: #333;
   white-space: nowrap;
   border-radius: 30px;
+  text-decoration: none; /* Убираем подчеркивание */
 }
 
 .tab:hover {
@@ -125,20 +141,33 @@ body {
 .tab.active {
   background: #222;
   color: #fff;
-  padding: 16px 36px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Для мобильных устройств */
 @media (max-width: 768px) {
   .tabbar {
-    gap: 8px;
-    padding: 10px 5px;
+    padding: 10px 5px; /* Уменьшаем padding для мобильных */
+    gap: 8px; /* Уменьшаем gap между элементами */
+    justify-content: flex-start; /* Оставляем выравнивание слева */
+    width: 100%;
+    max-width: none; /* Убираем ограничение по максимальной ширине на мобильных устройствах */
+    margin: 0; /* Убираем margin для мобильных устройств */
   }
 
   .tab {
-    font-size: 14px;
-    padding: 10px 15px;
+    font-size: 14px; /* Меньше шрифт */
+    padding: 10px 15px; /* Уменьшаем padding */
+    min-width: 120px; /* Уменьшаем минимальную ширину элементов */
+  }
+}
+
+/* Для больших экранов */
+@media (min-width: 769px) {
+  .tabbar {
+    justify-content: center; /* Центрируем элементы на экранах больше 768px */
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем саму таб-бар */
   }
 }
 
@@ -181,9 +210,54 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: #fff;
   font-size: 15px;
   font-family: "LTWave", sans-serif;
+}
+
+.nav-links-2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем элементы по горизонтали */
+  gap: 20px; /* Отступ между элементами */
+  padding: 0; /* Убираем стандартные отступы */
+}
+
+/* Стили для списка навигации */
+.nav-links-2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Размещаем элементы вертикально */
+  gap: 24px;
+  padding: 0;
+  margin: 20px 0 0 0; /* Добавляем отступ сверху, чтобы сдвигать вниз */
+}
+
+.nav-links-2 li {
+  display: block; /* Обеспечиваем вертикальное расположение */
+}
+
+.nav-links-2 a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: "LTWave", sans-serif;
+  display: block; /* Делаем ссылку блочным элементом, чтобы занимала всю ширину */
+  padding: 20px 0; /* Отступы по вертикали */
+}
+
+/* Социальные иконки */
+.social-icons-2 {
+  display: flex; /* Располагаем элементы по горизонтали */
+  align-items: center; /* Выравниваем по центру по вертикали */
+  justify-content: flex-start; /* Сдвигаем их к левому краю */
+  margin-top: 40px; /* Сдвигаем вниз */
+}
+
+.social-icons-2 img {
+  width: 32px;
+  margin-left: 20px; /* Добавляем отступ между иконками */
 }
 
 .logo {
@@ -256,34 +330,24 @@ body {
   font-family: "LTWave", sans-serif;
 }
 
-text-content {
+.text-content {
   display: flex;
   flex-direction: column; /* Элементы будут располагаться вертикально */
   gap: 20px; /* Расстояние между элементами */
   padding: 40px; /* Отступы вокруг контейнера */
 }
 
-.text-content-2 t1 {
+.text-content-2 t1,
+.text-content-2 t2,
+.text-content-2 t3,
+.text-content-2 t4,
+.text-content-2 t5 {
+  padding: 40px;
   font-size: 20px;
   color: #000;
   font-family: "LTWave", sans-serif;
-}
-.text-content-2 t2 {
-  font-size: 20px;
-  color: #000;
-  font-family: "LTWave", sans-serif;
-}
-
-.text-content-2 t3 {
-  font-size: 20px;
-  color: #000;
-  font-family: "LTWave", sans-serif;
-}
-
-.text-content-2 t4 {
-  font-size: 20px;
-  color: #000;
-  font-family: "LTWave", sans-serif;
+  display: block; /* Обеспечивает вертикальное расположение */
+  gap: 20px; /* Отступ между элементами */
 }
 
 /* Галерея */
@@ -554,4 +618,235 @@ text-content {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.7); /* Темнее фон при наведении */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
+}
+/* All Gallery */
+
+/* Галерея */
+.all-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.all-gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.all-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.all-gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.all-gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.all-gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .all-gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .all-gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
+}
+
+/* Conceps Gallery */
+
+/* Галерея */
+.conceps-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.conceps-gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.conceps-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.conceps-gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.conceps-gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.conceps-gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .conceps-gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .conceps-gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
+}
+
+/* Ext Gallery */
+
+/* Галерея */
+.ext-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.ext-gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.ext-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.ext-gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.ext-gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.ext-gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .ext-gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .ext-gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
+}
+
+/* INT Gallery */
+
+/* Галерея */
+.int-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.int-gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.int-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.int-gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.int-gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.int-gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .int-gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .int-gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
 }

@@ -6,134 +6,66 @@
     <title>KORK Studio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <script src="urls/con_urls.js"></script>
-  <script src="urls/ext_urls.js"></script>
-  <script src="urls/int_urls.js"></script>
-  <script src="gallery.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const tabs = document.querySelectorAll(".tab");
-      const savedTab = localStorage.getItem("selectedTab");
 
-      if (savedTab) {
-        tabs.forEach((tab) => {
-          tab.classList.remove("active");
-          if (tab.dataset.category === savedTab) {
-            tab.classList.add("active");
-          }
-        });
-      }
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", function () {
-          tabs.forEach((t) => t.classList.remove("active"));
-          this.classList.add("active");
-
-          localStorage.setItem("selectedTab", this.dataset.category);
-        });
-      });
-    });
-  </script>
-
+  <body>
+    <script>
+      window.onload = function () {
+        // Перенаправление на страницу all.html при загрузке этой страницы
+        if (
+          window.location.pathname === "/works.html" ||
+          window.location.pathname === "/"
+        ) {
+          window.location.href = "all.html";
+        }
+      };
+    </script>
 
     <!-- Навигация -->
     <header>
       <nav class="navbar">
-        <div class="logo" id="floating-logo">
-          <img src="assets/icons/KORK.png" alt="KORK Studio" />
-        </div>
-        <!-- Контейнер для навигационных ссылок -->
-        <div class="left">
-          <ul class="nav-links">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="works.html">Наши работы</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <!-- Изменена ссылка -->
-            <li><a href="contact.html">Контакты</a></li>
-          </ul>
-        </div>
-
-        <!-- Гамбургер-меню -->
-        <div class="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <!-- Drawer меню -->
-        <div class="drawer">
-          <ul class="nav-links-2">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="works.html">Наши работы</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-          </ul>
-          <div class="social-icons-2">
-            <a href="https://www.behance.net/eriksadirov" target="_blank">
-              <img src="assets/icons/behance_icon_w.png" alt="Behance" />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send/?phone=996505459505&text&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              <img src="assets/icons/whatsapp_icon_w.png" alt="WhatsApp" />
-            </a>
-            <a href="https://www.instagram.com/kork_studio/" target="_blank">
-              <img src="assets/icons/instagram_icon_w.png" alt="Instagram" />
-            </a>
-            <a href="mailto:ernazbekjar@gmail.com" target="_blank">
-              <img src="assets/icons/email_icon_w.png" alt="Email" />
-            </a>
-          </div>
-        </div>
-        
-
-        <!-- Логотип по центру -->
         <div class="logo">
           <img src="assets/icons/KORK.png" alt="KORK Studio" />
         </div>
 
-        <!-- Контейнер для социальных иконок -->
-        <div class="right">
-          <div class="social-icons">
-            <a href="https://www.behance.net/eriksadirov" target="_blank">
-              <img src="assets/icons/behance_icon.png" alt="Behance" />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send/?phone=996505459505&text&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              <img src="assets/icons/whatsapp_icon.png" alt="WhatsApp" />
-            </a>
-            <a href="https://www.instagram.com/kork_studio/" target="_blank">
-              <img src="assets/icons/instagram_icon.png" alt="Instagram" />
-            </a>
-            <a href="mailto:ernazbekjar@gmail.com" target="_blank">
-              <img src="assets/icons/email_icon.png" alt="Email" />
-            </a>
-          </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="works.html">Наши работы</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="https://www.behance.net/eriksadirov" target="_blank">
+            <img src="assets/icons/behance_icon.png" alt="Behance" />
+          </a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=996505459505"
+            target="_blank"
+          >
+            <img src="assets/icons/whatsapp_icon.png" alt="WhatsApp" />
+          </a>
+          <a href="https://www.instagram.com/kork_studio/" target="_blank">
+            <img src="assets/icons/instagram_icon.png" alt="Instagram" />
+          </a>
+          <a href="mailto:ernazbekjar@gmail.com" target="_blank">
+            <img src="assets/icons/email_icon.png" alt="Email" />
+          </a>
         </div>
       </nav>
     </header>
+
+    <!-- TabBar -->
     <div class="tabbar">
-        <button class="tab active" data-category="all">Все</button>
-        <button class="tab" data-category="concepts">Концепции</button>
-        <button class="tab" data-category="exterior">Экстерьер</button>
-        <button class="tab" data-category="interior">Интерьер</button>
-        <button class="tab" data-category="animation">Анимация</button>
-        <button class="tab" data-category="360">360 Панорама</button>
-      </div>
-
-   
- 
-
-      <section class="gallery">
-        <!-- Галерея будет заполняться динамически через JavaScript -->
-      </section>
+      <a href="all.html" class="tab">Все</a>
+      <a href="conceps.html" class="tab">Концепции</a>
+      <a href="ext.html" class="tab">Экстерьер</a>
+      <a href="int.html" class="tab">Интерьер</a>
+      <a href="animation.html" class="tab">Анимация</a>
+      <a href="360.html" class="tab">360 Панорама</a>
+    </div>
 
     <section class="hero">
       <h2>© KORK Studio 2025</h2>
     </section>
-    <script src="script.js"></script>
   </body>
 </html>

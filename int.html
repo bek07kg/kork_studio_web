@@ -9,9 +9,33 @@
   <script src="urls/con_urls.js"></script>
   <script src="urls/ext_urls.js"></script>
   <script src="urls/int_urls.js"></script>
-  <script src="gallery.js"></script>
+  <script src="all_gallery.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab");
+      const savedTab = localStorage.getItem("selectedTab");
 
-  <body>
+      if (savedTab) {
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+          if (tab.dataset.category === savedTab) {
+            tab.classList.add("active");
+          }
+        });
+      }
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+          tabs.forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+
+          localStorage.setItem("selectedTab", this.dataset.category);
+        });
+      });
+    });
+  </script>
+
+
     <!-- Навигация -->
     <header>
       <nav class="navbar">
@@ -21,12 +45,14 @@
         <!-- Контейнер для навигационных ссылок -->
         <div class="left">
           <ul class="nav-links">
-            <li><a href="">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="all.html">Наши работы</a></li>
             <li><a href="about.html">О нас</a></li>
+            <!-- Изменена ссылка -->
             <li><a href="contact.html">Контакты</a></li>
           </ul>
         </div>
+
         <!-- Гамбургер-меню -->
         <div class="hamburger">
           <div></div>
@@ -60,6 +86,7 @@
             </a>
           </div>
         </div>
+        
 
         <!-- Логотип по центру -->
         <div class="logo">
@@ -88,22 +115,23 @@
         </div>
       </nav>
     </header>
+    <div class="tabbar">
+      <a href="all.html" class="tab" data-category="all">Все</a>
+      <a href="conceps.html" class="tab" data-category="concepts">Концепции</a>
+      <a href="ext.html" class="tab" data-category="exterior">Экстерьер</a>
+      <a href="int.html" class="tab" data-category="interior">Интерьер</a>
+      <a href="animation.html" class="tab" data-category="animation">Анимация</a>
+      <a href="360.html" class="tab" data-category="360">360 Панорама</a>
+    </div>
+    
 
-    <!-- Главный баннер -->
-    <section class="hero">
-      <h1>KORK Studio!</h1>
-      <p>Архитектурные проекты и концепции | Фасады | Дизайн интерьеров</p>
-    </section>
-
-    <!-- Галерея изображений -->
-    <section class="gallery">
-      <!-- Галерея будет заполняться динамически через JavaScript -->
-    </section>
+      <section class="int-gallery">
+        <!-- Галерея будет заполняться динамически через JavaScript -->
+      </section>
 
     <section class="hero">
       <h2>© KORK Studio 2025</h2>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>
