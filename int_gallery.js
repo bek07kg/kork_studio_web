@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     i7: i7,
     i8: i8,
     i9: i9,
+    i10: i10,
+    i11: i11,
   };
 
   // Очищаем галерею перед добавлением новых изображений

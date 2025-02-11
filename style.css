@@ -509,10 +509,10 @@ body {
 .modal-content {
   margin: auto;
   display: block;
-  width: 100%; /* Растягивает изображение */
-  max-width: 900px; /* Можно изменить под нужный размер */
-  height: auto; /* Сохраняет пропорции */
-  object-fit: contain; /* Вписывает изображение без обрезки */
+  width: 90%; /* Уменьшил ширину, чтобы не занимало весь экран */
+  max-width: 750px; /* Сделал немного меньше */
+  height: auto;
+  object-fit: contain;
 }
 
 .close {

@@ -123,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
     [int7_1]: "i7",
     [int8_1]: "i8",
     [int9_1]: "i9",
+    [int10_1]: "i10",
+    [int11_1]: "i11",
   };
 
   Object.keys(imageGroups).forEach((imageUrl) => {
@@ -255,6 +257,8 @@ document.addEventListener("DOMContentLoaded", function () {
     [int7_1]: "i7",
     [int8_1]: "i8",
     [int9_1]: "i9",
+    [int10_1]: "i10",
+    [int11_1]: "i11",
   };
 
   Object.keys(imageGroups).forEach((imageUrl) => {
