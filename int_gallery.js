@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     i9: i9,
     i10: i10,
     i11: i11,
+    i12: i12,
   };
 
   // Очищаем галерею перед добавлением новых изображений

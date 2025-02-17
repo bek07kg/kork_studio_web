@@ -200,3 +200,64 @@ const i11 = [
   int11_8,
   int11_9,
 ];
+
+const int12_1 = "https://storage.googleapis.com/korkstudio/int/int12_1.webp";
+const int12_2 = "https://storage.googleapis.com/korkstudio/int/int12_2.webp";
+const int12_3 = "https://storage.googleapis.com/korkstudio/int/int12_3.webp";
+const int12_4 = "https://storage.googleapis.com/korkstudio/int/int12_4.webp";
+const int12_5 = "https://storage.googleapis.com/korkstudio/int/int12_5.webp";
+const int12_6 = "https://storage.googleapis.com/korkstudio/int/int12_6.webp";
+const int12_7 = "https://storage.googleapis.com/korkstudio/int/int12_7.webp";
+const int12_8 = "https://storage.googleapis.com/korkstudio/int/int12_8.webp";
+const int12_9 = "https://storage.googleapis.com/korkstudio/int/int12_9.webp";
+const int12_10 = "https://storage.googleapis.com/korkstudio/int/int12_10.webp";
+const int12_11 = "https://storage.googleapis.com/korkstudio/int/int12_11.webp";
+const int12_12 = "https://storage.googleapis.com/korkstudio/int/int12_12.webp";
+const int12_13 = "https://storage.googleapis.com/korkstudio/int/int12_13.webp";
+const int12_14 = "https://storage.googleapis.com/korkstudio/int/int12_14.webp";
+const int12_15 = "https://storage.googleapis.com/korkstudio/int/int12_15.webp";
+const int12_16 = "https://storage.googleapis.com/korkstudio/int/int12_16.webp";
+const int12_17 = "https://storage.googleapis.com/korkstudio/int/int12_17.webp";
+const int12_18 = "https://storage.googleapis.com/korkstudio/int/int12_18.webp";
+const int12_19 = "https://storage.googleapis.com/korkstudio/int/int12_19.webp";
+const int12_20 = "https://storage.googleapis.com/korkstudio/int/int12_20.webp";
+const int12_21 = "https://storage.googleapis.com/korkstudio/int/int12_21.webp";
+const int12_22 = "https://storage.googleapis.com/korkstudio/int/int12_22.webp";
+const int12_23 = "https://storage.googleapis.com/korkstudio/int/int12_23.webp";
+const int12_24 = "https://storage.googleapis.com/korkstudio/int/int12_24.webp";
+const int12_25 = "https://storage.googleapis.com/korkstudio/int/int12_25.webp";
+const int12_26 = "https://storage.googleapis.com/korkstudio/int/int12_26.webp";
+const int12_27 = "https://storage.googleapis.com/korkstudio/int/int12_27.webp";
+const int12_28 = "https://storage.googleapis.com/korkstudio/int/int12_28.webp";
+
+const i12 = [
+  int12_1,
+  int12_2,
+  int12_3,
+  int12_4,
+  int12_4,
+  int12_5,
+  int12_6,
+  int12_7,
+  int12_8,
+  int12_9,
+  int12_10,
+  int12_11,
+  int12_12,
+  int12_13,
+  int12_14,
+  int12_15,
+  int12_16,
+  int12_17,
+  int12_18,
+  int12_19,
+  int12_20,
+  int12_21,
+  int12_22,
+  int12_23,
+  int12_24,
+  int12_25,
+  int12_26,
+  int12_27,
+  int12_28,
+];

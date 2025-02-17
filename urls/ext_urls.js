@@ -339,3 +339,30 @@ const ext19_4 = "https://storage.googleapis.com/korkstudio/ext/ext19_4.webp";
 const ext19_5 = "https://storage.googleapis.com/korkstudio/ext/ext19_5.webp";
 
 const e19 = [ext19_1, ext19_2, ext19_3, ext19_4, ext19_5];
+
+const ext20_1 = "https://storage.googleapis.com/korkstudio/ext/ext20_1.webp";
+const ext20_2 = "https://storage.googleapis.com/korkstudio/ext/ext20_2.webp";
+const ext20_3 = "https://storage.googleapis.com/korkstudio/ext/ext20_3.webp";
+const ext20_4 = "https://storage.googleapis.com/korkstudio/ext/ext20_4.webp";
+const ext20_5 = "https://storage.googleapis.com/korkstudio/ext/ext20_5.webp";
+const ext20_6 = "https://storage.googleapis.com/korkstudio/ext/ext20_6.webp";
+const ext20_7 = "https://storage.googleapis.com/korkstudio/ext/ext20_7.webp";
+const ext20_8 = "https://storage.googleapis.com/korkstudio/ext/ext20_8.webp";
+const ext20_9 = "https://storage.googleapis.com/korkstudio/ext/ext20_9.webp";
+const ext20_10 = "https://storage.googleapis.com/korkstudio/ext/ext20_10.webp";
+const ext20_11 = "https://storage.googleapis.com/korkstudio/ext/ext20_11.webp";
+
+const e20 = [
+  ext20_1,
+  ext20_2,
+  ext20_3,
+  ext20_4,
+  ext20_5,
+  ext20_6,
+  ext20_6,
+  ext20_7,
+  ext20_8,
+  ext20_9,
+  ext20_10,
+  ext20_11,
+];

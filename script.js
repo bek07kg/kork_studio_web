@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [ext17_1]: "e17",
     [ext18_1]: "e18",
     [ext19_1]: "e19",
+    [ext20_1]: "e20",
     [int1_1]: "i1",
     [int2_1]: "i2",
     [int3_1]: "i3",
@@ -125,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [int9_1]: "i9",
     [int10_1]: "i10",
     [int11_1]: "i11",
+    [int12_1]: "i12",
   };
 
   Object.keys(imageGroups).forEach((imageUrl) => {
@@ -214,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [ext17_1]: "e17",
     [ext18_1]: "e18",
     [ext19_1]: "e19",
+    [ext20_1]: "e20",
   };
 
   Object.keys(imageGroups).forEach((imageUrl) => {
@@ -259,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     [int9_1]: "i9",
     [int10_1]: "i10",
     [int11_1]: "i11",
+    [int12_1]: "i12",
   };
 
   Object.keys(imageGroups).forEach((imageUrl) => {

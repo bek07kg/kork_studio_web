@@ -850,3 +850,61 @@ body {
     width: 100%; /* Один элемент на ряд */
   }
 }
+
+/* 360 PANORAMA Gallery */
+
+/* Галерея */
+.pan-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.pan-gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.pan-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.pan-gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.pan-gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.pan-gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .pan-gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .pan-gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
+}

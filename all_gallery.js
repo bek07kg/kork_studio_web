@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e17: e17,
     e18: e18,
     e19: e19,
+    e20: e20,
     i1: i1,
     i2: i2,
     i3: i3,
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     i9: i9,
     i10: i10,
     i11: i11,
+    i12: i12,
   };
 
   // Очищаем галерею перед добавлением новых изображений

@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e17: e17,
     e18: e18,
     e19: e19,
+    e20: e20,
   };
 
   // Очищаем галерею перед добавлением новых изображений
