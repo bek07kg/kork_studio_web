@@ -1,0 +1,73 @@
+/* Главный баннер */
+.hero {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #333;
+  font-family: "LTWave", sans-serif;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #666;
+  font-family: "LTWave", sans-serif;
+}
+
+.hero h2 {
+  font-size: 18px;
+  color: #333;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /* Элементы будут располагаться вертикально */
+  gap: 20px; /* Расстояние между элементами */
+  padding: 40px; /* Отступы вокруг контейнера */
+}
+
+.text-content t1 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+.text-content t2 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content t3 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content t4 {
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /* Элементы будут располагаться вертикально */
+  gap: 20px; /* Расстояние между элементами */
+  padding: 40px; /* Отступы вокруг контейнера */
+}
+
+.text-content-2 t1,
+.text-content-2 t2,
+.text-content-2 t3,
+.text-content-2 t4,
+.text-content-2 t5 {
+  padding: 40px;
+  font-size: 20px;
+  color: #000;
+  font-family: "LTWave", sans-serif;
+  display: block; /* Обеспечивает вертикальное расположение */
+  gap: 20px; /* Отступ между элементами */
+}

@@ -1,0 +1,269 @@
+/* Галерея */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею по горизонтали */
+}
+
+.gallery a {
+  display: block;
+  width: calc(50% - 10px); /* По два изображения в ряд на больших экранах */
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Эффект затемнения при наведении */
+.gallery a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Плавное появление затемнения */
+}
+
+.gallery a:hover::after {
+  opacity: 1; /* Затемнение появляется при наведении */
+}
+
+.gallery a:hover img {
+  cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 5px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery a {
+    width: 100%; /* Один элемент на ряд */
+  }
+}
+
+#floating-logo {
+  display: none; /* Логотип скрыт по умолчанию */
+  position: fixed;
+  top: 80px; /* Увеличиваем значение для опускания логотипа вниз */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+#floating-logo img {
+  height: 50px; /* Размер логотипа */
+  filter: brightness(0) invert(1); /* Применяем белый цвет к логотипу */
+}
+
+#floating-logo-2 {
+  display: none; /* Логотип скрыт по умолчанию */
+  position: fixed;
+  top: 80px; /* Увеличиваем значение для опускания логотипа вниз */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+#floating-logo-2 img {
+  height: 50px; /* Размер логотипа */
+  filter: brightness(0) invert(1); /* Применяем белый цвет к логотипу */
+}
+
+.gallery-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два столбца */
+  gap: 4px; /* Отступы между изображениями */
+  padding: 40px;
+  justify-content: center; /* Центрируем галерею */
+}
+
+.gallery-2 a {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-2 img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease; /* Добавляем плавность */
+}
+
+/* Затемнение при наведении */
+.gallery-2 a:hover img {
+  opacity: 0.5; /* Затемняем изображение */
+}
+
+/* Для мобильных устройств (1 столбец) */
+@media (max-width: 768px) {
+  .gallery-2 {
+    grid-template-columns: 1fr; /* Один столбец на узких экранах */
+    padding: 5px; /* Отступ от экрана в 5 пикселей */
+  }
+}
+
+/* Стиль для кнопки */
+.back-button {
+  position: fixed; /* Фиксируем кнопку в правом верхнем углу */
+  top: 120px; /* Отступ сверху */
+  left: 40px; /* Отступ справа */
+  width: 60px; /* Размер кнопки */
+  height: 60px; /* Размер кнопки */
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачно-черный фон */
+  border: none; /* Без границы */
+  border-radius: 50%; /* Круглая форма */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Центрируем иконку */
+  cursor: pointer; /* Курсор при наведении */
+  transition: background-color 0.3s; /* Плавное изменение фона при наведении */
+}
+
+.back-button img {
+  width: 25px; /* Размер иконки */
+  height: 25px;
+  filter: invert(1); /* Белый цвет для иконки */
+}
+
+.back-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее при наведении */
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1; /* Поверх всего */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Прозрачный фон */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%; /* Уменьшил ширину, чтобы не занимало весь экран */
+  max-width: 750px; /* Сделал немного меньше */
+  height: auto;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+
+  color: #fff;
+  font-size: 30px; /* Меньший размер шрифта для уменьшения высоты */
+
+  cursor: pointer;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  border-radius: 15px; /* Согнутые углы */
+
+  padding: 16px 24px; /* Уменьшены отступы для уменьшения размера */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; /* Убираем стандартную рамку кнопки */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для фона и тени */
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее фон при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
+}
+
+.right-button {
+  position: absolute;
+  top: 50%; /* Центр по вертикали */
+  right: 40px; /* Отступ от правого края */
+  transform: translateY(
+    -50%
+  ); /* Сдвиг на 50% высоты элемента, чтобы центрировать */
+
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  border-radius: 15px; /* Согнутые углы (квадрат с округлыми углами) */
+
+  padding: 20px; /* Отступы для кнопки */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; /* Убираем стандартную рамку кнопки */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для фона и тени */
+}
+
+.right-button:hover,
+.right-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7); /* Изменение фона на темнее */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
+}
+
+.left-button {
+  position: absolute;
+  top: 50%; /* Центр по вертикали */
+  left: 40px; /* Отступ от левого края */
+  transform: translateY(
+    -50%
+  ); /* Сдвиг на 50% высоты элемента, чтобы центрировать */
+
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+  border-radius: 15px; /* Согнутые углы */
+
+  padding: 15px; /* Отступы для кнопки */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; /* Убираем стандартную рамку кнопки */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы для фона и тени */
+}
+
+.left-button:hover,
+.left-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7); /* Темнее фон при наведении */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Легкая тень для кнопки */
+}

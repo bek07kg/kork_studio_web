@@ -1,0 +1,29 @@
+/* Стили для скрытия навигационных ссылок и иконок */
+.navbar .nav-links,
+.navbar .social-icons {
+  display: flex;
+}
+
+.navbar .nav-links a,
+.navbar .social-icons img {
+  font-size: 15px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Скрытие ссылок на мобильных устройствах */
+@media (max-width: 768px) {
+  .navbar .nav-links,
+  .navbar .social-icons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .drawer.active {
+    display: block;
+  }
+}

@@ -1,0 +1,74 @@
+.tabbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  background: #fff;
+  padding: 20px 10px;
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  -webkit-overflow-scrolling: touch; /* Плавная прокрутка на iOS */
+  flex-wrap: nowrap; /* Запрещаем перенос элементов на новую строку */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tabbar > * {
+  flex-shrink: 0; /* Запрещаем сжатие элементов */
+  min-width: 150px; /* Минимальная ширина для элементов */
+  box-sizing: border-box;
+}
+
+/* Убираем индикатор прокрутки */
+.tabbar::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "LTWave", sans-serif;
+  color: #333;
+  white-space: nowrap;
+  border-radius: 30px;
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.tab:hover {
+  color: #000;
+}
+
+.tab.active {
+  background: #222;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .tabbar {
+    padding: 10px 5px; /* Уменьшаем padding для мобильных */
+    gap: 8px; /* Уменьшаем gap между элементами */
+    justify-content: flex-start; /* Оставляем выравнивание слева */
+    width: 100%;
+    max-width: none; /* Убираем ограничение по максимальной ширине на мобильных устройствах */
+    margin: 0; /* Убираем margin для мобильных устройств */
+  }
+
+  .tab {
+    font-size: 14px; /* Меньше шрифт */
+    padding: 10px 15px; /* Уменьшаем padding */
+    min-width: 120px; /* Уменьшаем минимальную ширину элементов */
+  }
+}
+
+/* Для больших экранов */
+@media (min-width: 769px) {
+  .tabbar {
+    justify-content: center; /* Центрируем элементы на экранах больше 768px */
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем саму таб-бар */
+  }
+}

@@ -1,0 +1,27 @@
+/* Скрываем гамбургер-меню по умолчанию (для десктопов) */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  background-color: #e5e5e5;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* Показываем гамбургер-меню только на мобильных устройствах */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}

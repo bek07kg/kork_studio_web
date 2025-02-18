@@ -1,0 +1,104 @@
+/* Навигация */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e5e5e5;
+  padding: 20px 30px;
+  height: 140px;
+  position: relative;
+}
+
+.navbar .left,
+.navbar .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left {
+  justify-content: flex-start; /* Центрируем ссылки */
+  margin-left: -30px;
+}
+
+.navbar .right {
+  justify-content: flex-end;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-family: "LTWave", sans-serif;
+}
+
+.nav-links-2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем элементы по горизонтали */
+  gap: 20px; /* Отступ между элементами */
+  padding: 0; /* Убираем стандартные отступы */
+}
+
+/* Стили для списка навигации */
+.nav-links-2 {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Размещаем элементы вертикально */
+  gap: 24px;
+  padding: 0;
+  margin: 20px 0 0 0; /* Добавляем отступ сверху, чтобы сдвигать вниз */
+}
+
+.nav-links-2 li {
+  display: block; /* Обеспечиваем вертикальное расположение */
+}
+
+.nav-links-2 a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: "LTWave", sans-serif;
+  display: block; /* Делаем ссылку блочным элементом, чтобы занимала всю ширину */
+  padding: 20px 0; /* Отступы по вертикали */
+}
+
+/* Социальные иконки */
+.social-icons-2 {
+  display: flex; /* Располагаем элементы по горизонтали */
+  align-items: center; /* Выравниваем по центру по вертикали */
+  justify-content: flex-start; /* Сдвигаем их к левому краю */
+  margin-top: 40px; /* Сдвигаем вниз */
+}
+
+.social-icons-2 img {
+  width: 32px;
+  margin-left: 20px; /* Добавляем отступ между иконками */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 80px;
+}
+
+/* Социальные иконки */
+.social-icons img {
+  width: 28px;
+  margin-left: 20px;
+}
