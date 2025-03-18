@@ -13,3 +13,11 @@ body {
   background-color: #fff;
   text-align: center;
 }
+
+.divider {
+  position: absolute;
+  left: 0;
+  width: 100vw; /* 100% ширины экрана */
+  height: 2px;
+  background-color: #333;
+}
