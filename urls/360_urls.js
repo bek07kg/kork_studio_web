@@ -1,1 +1,2 @@
-const p1 = "https://storage.googleapis.com/korkstudio/360p/p1.webp";
+const p1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/p1%20(1).webp";

@@ -1,17 +1,31 @@
-const ext1_1 = "https://storage.googleapis.com/korkstudio/ext/ext1_1.webp";
-const ext1_2 = "https://storage.googleapis.com/korkstudio/ext/ext1_2.webp";
-const ext1_3 = "https://storage.googleapis.com/korkstudio/ext/ext1_3.webp";
-const ext1_4 = "https://storage.googleapis.com/korkstudio/ext/ext1_4.webp";
-const ext1_5 = "https://storage.googleapis.com/korkstudio/ext/ext1_5.webp";
-const ext1_6 = "https://storage.googleapis.com/korkstudio/ext/ext1_6.webp";
-const ext1_7 = "https://storage.googleapis.com/korkstudio/ext/ext1_7.webp";
-const ext1_8 = "https://storage.googleapis.com/korkstudio/ext/ext1_8.webp";
-const ext1_9 = "https://storage.googleapis.com/korkstudio/ext/ext1_9.webp";
-const ext1_10 = "https://storage.googleapis.com/korkstudio/ext/ext1_10.webp";
-const ext1_11 = "https://storage.googleapis.com/korkstudio/ext/ext1_11.webp";
-const ext1_12 = "https://storage.googleapis.com/korkstudio/ext/ext1_12.webp";
-const ext1_13 = "https://storage.googleapis.com/korkstudio/ext/ext1_13.webp";
-const ext1_14 = "https://storage.googleapis.com/korkstudio/ext/ext1_14.webp";
+const ext1_1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/ext1_1.webp";
+const ext1_2 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-2.webp";
+const ext1_3 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-3.webp";
+const ext1_4 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-4.webp";
+const ext1_5 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-5.webp";
+const ext1_6 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-6.webp";
+const ext1_7 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-7.webp";
+const ext1_8 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-8.webp";
+const ext1_9 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-9.webp";
+const ext1_10 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-10.webp";
+const ext1_11 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-11.webp";
+const ext1_12 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-12.webp";
+const ext1_13 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-13.webp";
+const ext1_14 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnd-14 .webp";
 
 const e1 = [
   ext1_1,
@@ -30,48 +44,74 @@ const e1 = [
   ext1_14,
 ];
 
-const ext2_1 = "https://storage.googleapis.com/korkstudio/ext/ext2_1.webp";
-const ext2_2 = "https://storage.googleapis.com/korkstudio/ext/ext2_2.webp";
-const ext2_3 = "https://storage.googleapis.com/korkstudio/ext/ext2_3.webp";
-const ext2_4 = "https://storage.googleapis.com/korkstudio/ext/ext2_4.webp";
-const ext2_5 = "https://storage.googleapis.com/korkstudio/ext/ext2_5.webp";
-const ext2_6 = "https://storage.googleapis.com/korkstudio/ext/ext2_6.webp";
-const ext2_7 = "https://storage.googleapis.com/korkstudio/ext/ext2_7.webp";
+const ext2_1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-1.webp";
+const ext2_2 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-2.webp";
+const ext2_3 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-3.webp";
+const ext2_4 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-4.webp";
+const ext2_5 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-5.webp";
+const ext2_6 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-6.webp";
+const ext2_7 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-7.webp";
+const ext2_8 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-8.webp";
+const ext2_9 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RenD-9.webp";
 
-const e2 = [ext2_1, ext2_2, ext2_3, ext2_4, ext2_5, ext2_6, ext2_7];
-
-const ext3_1 = "https://storage.googleapis.com/korkstudio/ext/ext3_1.webp";
-const ext3_2 = "https://storage.googleapis.com/korkstudio/ext/ext3_2.webp";
-const ext3_3 = "https://storage.googleapis.com/korkstudio/ext/ext3_3.webp";
-const ext3_4 = "https://storage.googleapis.com/korkstudio/ext/ext3_4.webp";
-const ext3_5 = "https://storage.googleapis.com/korkstudio/ext/ext3_5.webp";
-const ext3_6 = "https://storage.googleapis.com/korkstudio/ext/ext3_6.webp";
-const ext3_7 = "https://storage.googleapis.com/korkstudio/ext/ext3_7.webp";
-const ext3_8 = "https://storage.googleapis.com/korkstudio/ext/ext3_8.webp";
-const ext3_9 = "https://storage.googleapis.com/korkstudio/ext/ext3_9.webp";
-
-const e3 = [
-  ext3_1,
-  ext3_2,
-  ext3_3,
-  ext3_4,
-  ext3_5,
-  ext3_6,
-  ext3_7,
-  ext3_8,
-  ext3_9,
+const e2 = [
+  ext2_1,
+  ext2_2,
+  ext2_3,
+  ext2_4,
+  ext2_5,
+  ext2_6,
+  ext2_7,
+  ext2_8,
+  ext2_9,
 ];
 
-const ext4_1 = "https://storage.googleapis.com/korkstudio/ext/ext4_1.webp";
-const ext4_2 = "https://storage.googleapis.com/korkstudio/ext/ext4_2.webp";
-const ext4_3 = "https://storage.googleapis.com/korkstudio/ext/ext4_3.webp";
-const ext4_4 = "https://storage.googleapis.com/korkstudio/ext/ext4_4.webp";
-const ext4_5 = "https://storage.googleapis.com/korkstudio/ext/ext4_5.webp";
-const ext4_6 = "https://storage.googleapis.com/korkstudio/ext/ext4_6.webp";
-const ext4_7 = "https://storage.googleapis.com/korkstudio/ext/ext4_7.webp";
-const ext4_8 = "https://storage.googleapis.com/korkstudio/ext/ext4_8.webp";
-const ext4_9 = "https://storage.googleapis.com/korkstudio/ext/ext4_9.webp";
-const ext4_10 = "https://storage.googleapis.com/korkstudio/ext/ext4_10.webp";
+const ext3_1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok1.webp";
+const ext3_2 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok2.webp";
+const ext3_3 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok3.webp";
+const ext3_4 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok4.webp";
+const ext3_5 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok5.webp";
+const ext3_6 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok6.webp";
+const ext3_7 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/Ren_sok7.webp";
+
+const e3 = [ext3_1, ext3_2, ext3_3, ext3_4, ext3_5, ext3_6, ext3_7];
+
+const ext4_1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_1.webp";
+const ext4_2 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_2.webp";
+const ext4_3 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_3.webp";
+const ext4_4 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_4.webp";
+const ext4_5 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_5.webp";
+const ext4_6 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_6.webp";
+const ext4_7 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_7.webp";
+const ext4_8 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_8.webp";
+const ext4_9 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_9.webp";
+const ext4_10 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/RendE_10.webp";
 
 const e4 = [
   ext4_1,
@@ -86,17 +126,28 @@ const e4 = [
   ext4_10,
 ];
 
-const ext5_1 = "https://storage.googleapis.com/korkstudio/ext/ext5_1.webp";
-const ext5_2 = "https://storage.googleapis.com/korkstudio/ext/ext5_2.webp";
-const ext5_3 = "https://storage.googleapis.com/korkstudio/ext/ext5_3.webp";
-const ext5_4 = "https://storage.googleapis.com/korkstudio/ext/ext5_4.webp";
-const ext5_5 = "https://storage.googleapis.com/korkstudio/ext/ext5_5.webp";
-const ext5_6 = "https://storage.googleapis.com/korkstudio/ext/ext5_6.webp";
-const ext5_7 = "https://storage.googleapis.com/korkstudio/ext/ext5_7.webp";
-const ext5_8 = "https://storage.googleapis.com/korkstudio/ext/ext5_8.webp";
-const ext5_9 = "https://storage.googleapis.com/korkstudio/ext/ext5_9.webp";
-const ext5_10 = "https://storage.googleapis.com/korkstudio/ext/ext5_10.webp";
-const ext5_11 = "https://storage.googleapis.com/korkstudio/ext/ext5_11.webp";
+const ext5_1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%201.webp";
+const ext5_2 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%202.webp";
+const ext5_3 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%203.webp";
+const ext5_4 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%204.webp";
+const ext5_5 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%205.webp";
+const ext5_6 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%206.webp";
+const ext5_7 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%207.webp";
+const ext5_8 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%208.webp";
+const ext5_9 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%209.webp";
+const ext5_10 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%2010.webp";
+const ext5_11 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/REnder-B%2011.webp";
 
 const e5 = [
   ext5_1,

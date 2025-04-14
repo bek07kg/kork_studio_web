@@ -1,4 +1,5 @@
-const con1_1 = "https://storage.googleapis.com/korkstudio/con/con1_1.webp";
+const con1_1 =
+  "https://raw.githubusercontent.com/bek07kg/project_images/refs/heads/main/ext1_1.webp";
 const con1_2 = "https://storage.googleapis.com/korkstudio/con/con1_2.webp";
 const con1_3 = "https://storage.googleapis.com/korkstudio/con/con1_3.webp";
 const con1_4 = "https://storage.googleapis.com/korkstudio/con/con1_4.webp";
